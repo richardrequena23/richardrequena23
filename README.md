@@ -19,6 +19,9 @@ automation, I'm building the machine I used to *be*.
   a human-review catch-all (AI routes; it never writes customer copy unsupervised)
 - **Attribution & integration layers** — every contact stamped with its source, clean named
   events webhooked out to Slack, Zapier, Make, n8n, or a reporting sheet
+- **Audits & fixes of inherited accounts** — half-built and abandoned GHL setups, checked
+  against [a written audit list](https://github.com/richardrequena23/ghl-workflow-patterns/blob/main/audit-checklist.md)
+  of the defects that actually cost money (most are invisible on the canvas)
 
 All of it is built and published as working reference systems in my own GoHighLevel
 account — the blueprints are documented in
