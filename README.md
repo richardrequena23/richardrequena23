@@ -38,8 +38,9 @@ themselves.
 
 | Repo | What it is |
 |---|---|
-| [`ghl-workflow-patterns`](https://github.com/richardrequena23/ghl-workflow-patterns) | Documented blueprints of my published GoHighLevel automation systems |
-| [`ghl-webhook-toolkit`](https://github.com/richardrequena23/ghl-webhook-toolkit) | Python toolkit for receiving and routing GoHighLevel workflow webhooks |
+| [`ghl-workflow-patterns`](https://github.com/richardrequena23/ghl-workflow-patterns) | Documented blueprints of my published GoHighLevel automation systems — flow diagrams, design decisions, and the traps each build hit |
+| [`ghl-webhook-toolkit`](https://github.com/richardrequena23/ghl-webhook-toolkit) | Zero-dependency Python toolkit for receiving and routing GoHighLevel workflow webhooks — tested, CI on Python 3.9–3.13 |
+| [`lead-csv-hygiene`](https://github.com/richardrequena23/lead-csv-hygiene) | CLI that cleans exported lead lists before CRM import — every rule learned from processing 20,000+ real leads |
 
 ## Find me
 
