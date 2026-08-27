@@ -21,9 +21,11 @@ automation, I'm building the machine I used to *be*.
 - **AI steps inside workflows** — model-based scoring and drafting behind strict output
   contracts, deterministic guardrails, and a human-in-the-loop send gate (AI routes and
   drafts; a signed human decision sits in front of the only send node)
-- **Audits & fixes of inherited accounts** — a [40-rule static analyzer](https://github.com/richardrequena23/ghl-workflow-auditor)
-  with 234 tests that reads a GHL account and produces a scored, client-ready report of
-  the defects that actually cost money (most are invisible on the canvas)
+- **Audits & fixes of inherited accounts** — a [static analyzer](https://github.com/richardrequena23/ghl-workflow-auditor)
+  that reads a GHL account export and produces a scored, client-ready report of the defects
+  that actually cost money (most are invisible on the canvas), plus a
+  [snapshot differ](https://github.com/richardrequena23/ghl-snapshot-diff) that answers
+  "what changed since it was working?" — a question GHL itself keeps no history to answer
 
 ## Proof, not adjectives
 
@@ -33,10 +35,11 @@ screenshot, not a promise.
 
 | Repo | The proof |
 |---|---|
-| [`ghl-workflow-auditor`](https://github.com/richardrequena23/ghl-workflow-auditor) | 40 audit rules, **234 tests**, 0–100 health scoring, client-ready HTML report |
+| [`ghl-workflow-auditor`](https://github.com/richardrequena23/ghl-workflow-auditor) | Static analysis over a GHL account export — 0–100 health score, client-ready HTML report, and a rule catalog generated from the tool's own findings so it cannot describe a check the tool no longer performs. Live rule and test counts are on the repo's badges |
 | [`ghl-webhook-hub`](https://github.com/richardrequena23/ghl-webhook-hub) | Signed/idempotent/dead-lettered n8n webhook hub — **18/18 contract tests**, incl. GHL's Sep-1-2026 Ed25519 signature cutover |
 | [`ghl-webhook-toolkit`](https://github.com/richardrequena23/ghl-webhook-toolkit) | Zero-dependency Python receiver/router for GHL webhooks — 21 stdlib unittest cases |
-| [`ghl-workflow-patterns`](https://github.com/richardrequena23/ghl-workflow-patterns) | Documented blueprints of 13 published GHL systems — diagrams, design decisions, the traps each build hit |
+| [`ghl-workflow-patterns`](https://github.com/richardrequena23/ghl-workflow-patterns) | 8 documented blueprints of systems published in my own GHL account — 7 architecture diagrams, design decisions, the traps each build hit |
+| [`ghl-snapshot-diff`](https://github.com/richardrequena23/ghl-snapshot-diff) | Diffs two workflow exports — unpublished workflows, wiped send windows, re-scoped trigger filters, reworded first touches. **19 tests**, zero dependencies |
 | [`lead-csv-hygiene`](https://github.com/richardrequena23/lead-csv-hygiene) | CLI that cleans lead exports before CRM import — every rule learned from 20,000+ real leads |
 
 ![Webhook Integration Hub — signed ingress, retry ladder, circuit breaker, DLQ with replay](https://raw.githubusercontent.com/richardrequena23/ghl-webhook-hub/main/images/canvas-hub.png)
