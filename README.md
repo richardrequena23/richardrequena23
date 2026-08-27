@@ -20,7 +20,8 @@ automation, I'm building the machine I used to *be*.
   and a human gets alerted once, not twenty times
 - **AI steps inside workflows** — model-based scoring and drafting behind strict output
   contracts, deterministic guardrails, and a human-in-the-loop send gate (AI routes and
-  drafts; a signed human decision sits in front of the only send node)
+  drafts; a signed human decision sits in front of the only send node). Where an agent
+  touches data, the whitelist is compiled code, not a sentence in a prompt
 - **Audits & fixes of inherited accounts** — a [static analyzer](https://github.com/richardrequena23/ghl-workflow-auditor)
   that reads a GHL account export and produces a scored, client-ready report of the defects
   that actually cost money (most are invisible on the canvas), plus a
@@ -36,6 +37,7 @@ screenshot, not a promise.
 | Repo | The proof |
 |---|---|
 | [`ghl-workflow-auditor`](https://github.com/richardrequena23/ghl-workflow-auditor) | Static analysis over a GHL account export — 0–100 health score, client-ready HTML report, and a rule catalog generated from the tool's own findings so it cannot describe a check the tool no longer performs. Live rule and test counts are on the repo's badges |
+| [`ghl-crm-query-agent`](https://github.com/richardrequena23/ghl-crm-query-agent) | Plain-English questions against a CRM, in n8n — the model names a query from a frozen twelve-entry read-only catalog and never writes one. Read-only proven against a **live write endpoint**: 8 hijack attempts, counter unmoved. 56-case contract suite |
 | [`ghl-webhook-hub`](https://github.com/richardrequena23/ghl-webhook-hub) | Signed/idempotent/dead-lettered n8n webhook hub — **18/18 contract tests**, incl. GHL's Sep-1-2026 Ed25519 signature cutover |
 | [`ghl-webhook-toolkit`](https://github.com/richardrequena23/ghl-webhook-toolkit) | Zero-dependency Python receiver/router for GHL webhooks — 21 stdlib unittest cases |
 | [`ghl-workflow-patterns`](https://github.com/richardrequena23/ghl-workflow-patterns) | 8 documented blueprints of systems published in my own GHL account — 7 architecture diagrams, design decisions, the traps each build hit |
@@ -55,7 +57,6 @@ a walkthrough video and a one-page doc so the owner can edit any message themsel
 ## Currently building
 
 - Voice AI appointment-setter (Vapi → n8n → GHL calendar) — specced, waiting on a telephony number
-- Publishing the CRM query agent — 7 n8n workflows behind a 56-case contract suite — as its own repo
 
 ## Find me
 
