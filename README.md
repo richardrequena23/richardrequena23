@@ -54,9 +54,8 @@ a walkthrough video and a one-page doc so the owner can edit any message themsel
 
 ## Currently building
 
-- Voice AI appointment-setter demo (Vapi → n8n → GHL calendar)
-- CRM query agent with retrieval over a real playbook
-- Eval suites for the AI workflows — accuracy numbers, not vibes
+- Voice AI appointment-setter (Vapi → n8n → GHL calendar) — specced, waiting on a telephony number
+- Publishing the CRM query agent — 7 n8n workflows behind a 56-case contract suite — as its own repo
 
 ## Find me
 
